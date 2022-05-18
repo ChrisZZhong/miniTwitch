@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "8ed8f099-9673-4bd9-9df0-9e75ddfa6f36",
+		"name": "03. Twitch API 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Twitch token generate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://id.twitch.tv/oauth2/token?client_id=84a5n6o8repyqt88sm3u8hzophwghi&client_secret=drmx588qmtw38do87m6th3zqcegkii&grant_type=client_credentials",
+					"protocol": "https",
+					"host": [
+						"id",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"oauth2",
+						"token"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "84a5n6o8repyqt88sm3u8hzophwghi"
+						},
+						{
+							"key": "client_secret",
+							"value": "drmx588qmtw38do87m6th3zqcegkii"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Twitch top games sample request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer 347m1fu6aw34e8fjhvut561sacggng"
+					},
+					{
+						"key": "Client-Id",
+						"type": "text",
+						"value": "84a5n6o8repyqt88sm3u8hzophwghi"
+					}
+				],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/games/top",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"games",
+						"top"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Twitch search game sample request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer 347m1fu6aw34e8fjhvut561sacggng"
+					},
+					{
+						"key": "Client-Id",
+						"type": "text",
+						"value": "84a5n6o8repyqt88sm3u8hzophwghi"
+					}
+				],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/games?name=warcraft%20III",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"games"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "warcraft%20III"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get top games",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/game",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"game"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search game",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/game?game_name=Starcraft II",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"game"
+					],
+					"query": [
+						{
+							"key": "game_name",
+							"value": "Starcraft II"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "ae60bded-4a19-4660-ab3f-e735d2dd5dc3",
+		"name": "04.Twitch API 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Twitch clip search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer i3z770pxq9asrle8b5fdfro58kz2vw",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "r76y7c10yqv1izt9xwpcgf1404uj4o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.twitch.tv/helix/clips?game_id=12924",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"clips"
+					],
+					"query": [
+						{
+							"key": "game_id",
+							"value": "12924"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Twitch video search",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer i3z770pxq9asrle8b5fdfro58kz2vw",
+						"type": "text"
+					},
+					{
+						"key": "Client-Id",
+						"value": "r76y7c10yqv1izt9xwpcgf1404uj4o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/videos?game_id=12924",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"videos"
+					],
+					"query": [
+						{
+							"key": "game_id",
+							"value": "12924"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Twitch stream search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer i3z770pxq9asrle8b5fdfro58kz2vw"
+					},
+					{
+						"key": "Client-Id",
+						"type": "text",
+						"value": "r76y7c10yqv1izt9xwpcgf1404uj4o"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.twitch.tv/helix/streams?game_id=12924",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"streams"
+					],
+					"query": [
+						{
+							"key": "game_id",
+							"value": "12924"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search stream/video/clip",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/search?game_id=490422",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "game_id",
+							"value": "490422"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

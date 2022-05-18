@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "fa291eb6-88d2-4eec-9286-339f7bcd079f",
+		"name": "02. Java Servlets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Game",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Name is World of Warcraft\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.name).to.eql(\"World of Warcraft\");",
+							"});",
+							"",
+							"pm.test(\"Developer is Blizzard Entertainment\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.developer).to.eql(\"Blizzard Entertainment\");",
+							"});",
+							"",
+							"pm.test(\"Release Time is Feb 11, 2005\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.release_time).to.eql(\"Feb 11, 2005\");",
+							"});",
+							"",
+							"pm.test(\"Website is www.worldofwarcraft.com\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.website).to.eql(\"https://www.worldofwarcraft.com\");",
+							"});",
+							"",
+							"pm.test(\"Price is 49.99\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.price).to.eql(49.99);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/game?game",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"game"
+					],
+					"query": [
+						{
+							"key": "game",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Game",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Status is ok\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.status).to.eql(\"ok\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"World of Warcraft\",\n    \"developer\": \"Blizzard Entertainment\",\n    \"release_time\": \"Feb 11, 2005\",\n    \"website\": \"https://www.worldofwarcraft.com\",\n    \"price\": 49.99\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/game",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"game"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
