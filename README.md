@@ -47,7 +47,9 @@ Authentication: Session-based authentication
 Distributed under the MIT License.
 
 # Contacts
-zzcjob397@gmail.com
+Email: zzcjob397@gmail.com
+
+Portfolio: https://chriszzhong.georgetown.domains/
 
 
 
