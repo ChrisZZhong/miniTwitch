@@ -8,7 +8,7 @@ Video+ is a personalized Twitch resources recommendation engine. Users can searc
 ![screenshot2](https://user-images.githubusercontent.com/50295329/158078860-2aa0c93d-3fbf-4c3f-9f05-a44e291f1361.jpg)
 
 # Features
-Front-end: React.js, Ant Design
+Front-end: HTML/JS/CSS
 
 Back-end: JavaEE, Apache Tomcat, MySQL (AWS RDS)
 
@@ -17,8 +17,6 @@ Retrieving Games: Twitch APIs
 Recommendation: A content-based algorithm implemented in Java
 
 Authentication: Session-based authentication
-
-Deployment: AWS EC2
 
 <h2>Maven</h2>
 <P>In this project, I use Maven to manage build configurations and dependencies.</P>
