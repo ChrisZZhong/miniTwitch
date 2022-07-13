@@ -1,8 +1,7 @@
 # Overview
 This is a personalized Twitch resources recommendation engine. Users can search and retrieve real-time Twitch resources using Twitch API and make their favorite collection. They can then get recommended based on trending games or their like history. To learn more details, please see the code/demo picture.
 
-<img src="https://user-images.githubusercontent.com/50295329/158076247-383c2262-51b4-489e-8419-49f3dd06c774.gif" width="900">
-
+![135024271-6e9ff870-10d3-437e-be15-76ed8e142d9a](https://user-images.githubusercontent.com/50295329/158076247-383c2262-51b4-489e-8419-49f3dd06c774.gif)
 
 # User Interface
 ![screenshot1](https://user-images.githubusercontent.com/50295329/158078858-d9194c70-336c-4af0-aca4-89a24b00a94d.jpg)
